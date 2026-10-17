@@ -1,105 +1,323 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processo Judicial - Kinesfera [RP]</title>
+    <title>Consulta Processual Unificada - Processo 8009241-18.2026.8.05.0113</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        gold: {
+                            500: '#d97706',
+                            600: '#b45309',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header {
-            border-bottom: 2px solid #003366;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            color: #003366;
-            font-size: 22px;
-            margin: 0;
-        }
-        .badge {
-            background-color: #e67e22;
-            color: white;
-            padding: 3px 8px;
-            font-size: 12px;
-            border-radius: 4px;
-            vertical-align: middle;
-        }
-        .info-group {
-            margin-bottom: 15px;
-        }
-        .info-label {
-            font-weight: bold;
-            color: #555;
-            display: block;
-        }
-        .info-value {
-            color: #111;
-            font-size: 15px;
-        }
-        .disclaimer {
-            margin-top: 40px;
-            padding: 15px;
-            background-color: #fff8e1;
-            border-left: 4px solid #ffc107;
-            font-size: 13px;
-            color: #666;
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-100 text-slate-800 dark:bg-slate-950 dark:text-slate-200 min-h-screen flex flex-col transition-colors duration-200">
 
-<div class="container">
-    <div class="header">
-        <h1>Processo Judicial - Kinesfera <span class="badge">RP</span></h1>
-        <p style="font-size: 13px; color: #777;">Consulta Pública Unificada de Registo Processual Fictício</p>
-    </div>
+    <!-- Top Navigation Header -->
+    <header class="bg-navy-900 border-b border-slate-800 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-600 p-2 rounded-lg text-white">
+                    <i class="fa-solid me-1 fa-scale-balanced text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-base sm:text-lg tracking-tight uppercase leading-none">JUSCONSULTA</h1>
+                    <p class="text-[10px] text-slate-400 tracking-wider uppercase">Portal de Transparência e Registros Judiciais</p>
+                </div>
+            </div>
 
-    <div class="info-group">
-        <span class="info-label">Número do Auto:</span>
-        <span class="info-value">800XXXX-2026.8.05.0001 (Simulado)</span>
-    </div>
+            <!-- Search Mockup in Header -->
+            <div class="hidden md:flex items-center relative w-72">
+                <input type="text" value="Kinesfera" readonly class="w-full bg-slate-800 text-slate-200 text-sm rounded-lg pl-9 pr-4 py-1.5 border border-slate-700 focus:outline-none">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 text-slate-400 text-xs"></i>
+                <span class="absolute right-2 text-[10px] bg-slate-700 px-1.5 py-0.5 rounded text-slate-300">ENTER</span>
+            </div>
 
-    <div class="info-group">
-        <span class="info-label">Investigado / Envolvido (Pseudónimo):</span>
-        <span class="info-value"><strong>Kinesfera</strong></span>
-    </div>
+            <!-- Theme Toggle & Status -->
+            <div class="flex items-center space-x-4">
+                <button id="themeToggle" class="p-2 text-slate-300 hover:text-white rounded-lg hover:bg-slate-800 transition">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-lg text-amber-400"></i>
+                </button>
+                <div class="hidden sm:flex items-center space-x-2 text-xs bg-emerald-950/60 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Base Atualizada</span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="info-group">
-        <span class="info-label">Classe Processual:</span>
-        <span class="info-value">Inquérito de Investigação Especial (Intermediação Digital de Ativos)</span>
-    </div>
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
 
-    <div class="info-group">
-        <span class="info-label">Status:</span>
-        <span class="info-value" style="color: #c0392b; font-weight: bold;">Em Andamento / Em Análise de Autos</span>
-    </div>
+        <!-- Breadcrumb navigation -->
+        <nav class="text-xs text-slate-500 dark:text-slate-400 flex items-center space-x-2">
+            <a href="#" class="hover:underline">Início</a>
+            <span>/</span>
+            <a href="#" class="hover:underline">Consulta Pública</a>
+            <span>/</span>
+            <a href="#" class="hover:underline">Estadual</a>
+            <span>/</span>
+            <span class="text-slate-800 dark:text-slate-200 font-medium">Processo 8009241-18.2026.8.05.0113</span>
+        </nav>
 
-    <div class="info-group">
-        <span class="info-label">Resumo dos Factos (RP):</span>
-        <span class="info-value">
-            Registo de investigação sobre alegadas operações de intermediação não autorizada de bens e transações em ambiente digital envolvendo o pseudónimo Kinesfera no contexto de jogo de interpretação (Roleplay).
-        </span>
-    </div>
+        <!-- Case Banner Header -->
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-2 h-full bg-amber-500"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <div class="flex flex-wrap items-center gap-2 mb-2">
+                        <span class="bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-400 border border-amber-300 dark:border-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                            <i class="fa-solid fa-gavel mr-1"></i> Ação Penal - Fraude Eletrônica
+                        </span>
+                        <span class="bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-400 border border-blue-300 dark:border-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                            Em Andamento
+                        </span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">
+                            Distribuído em: 14/02/2026
+                        </span>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
+                        Processo nº 8009241-18.2026.8.05.0113
+                    </h2>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                        Comarca de Origem: 1ª Vara de Crimes Cibernéticos e Contra o Patrimônio
+                    </p>
+                </div>
 
-    <div class="disclaimer">
-        <strong>Aviso de Isenção de Responsabilidade (Roleplay):</strong><br>
-        Esta página é um documento puramente fictício criado exclusivamente para fins de entretenimento e jogo de interpretação (Roleplay / RP). Nenhuma das informações contidas nesta página possui validade jurídica ou relação com factos e pessoas do mundo real.
-    </div>
-</div>
+                <!-- Export & Actions Bar -->
+                <div class="flex items-center space-x-2">
+                    <button onclick="downloadPDF()" class="flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white px-4 py-2 rounded-lg text-sm font-medium shadow transition">
+                        <i class="fa-solid fa-file-pdf text-red-400"></i>
+                        <span>Exportar PDF</span>
+                    </button>
+                    <button onclick="copyURL()" class="p-2 border border-slate-300 dark:border-slate-700 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition" title="Copiar Link">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
 
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- Main Details Column (2 Cols) -->
+            <div class="lg:col-span-2 space-y-6">
+
+                <!-- Parties & Identifiers Card -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+                    <h3 class="text-base font-semibold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-2 flex items-center">
+                        <i class="fa-solid fa-users text-amber-500 mr-2"></i> Partes Envolvidas
+                    </h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-800">
+                            <span class="text-xs uppercase font-semibold text-slate-400 block mb-1">Polo Passivo (Investigado/Requerido)</span>
+                            <div class="font-bold text-slate-900 dark:text-amber-400 text-lg flex items-center">
+                                <span>KINESFERA</span>
+                                <span class="ml-2 text-[10px] bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-1.5 py-0.5 rounded font-normal">Identificador Digital</span>
+                            </div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Alvo principal de inquérito por intermediação não autorizada.</p>
+                        </div>
+
+                        <div class="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-800">
+                            <span class="text-xs uppercase font-semibold text-slate-400 block mb-1">Polo Ativo (Autor)</span>
+                            <div class="font-bold text-slate-900 dark:text-white text-base">
+                                Ministério Público do Estado
+                            </div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Promotoria Especializada em Crimes de Alta Tecnologia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary of Facts / Description -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+                    <h3 class="text-base font-semibold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-2 flex items-center">
+                        <i class="fa-solid fa-file-contract text-amber-500 mr-2"></i> Resumo do Objeto e Fatos Investigados
+                    </h3>
+
+                    <div class="prose prose-slate dark:prose-invert max-w-none text-sm leading-relaxed text-slate-700 dark:text-slate-300 space-y-3">
+                        <p>
+                            Trata-se de procedimento investigatório criminal instaurado para apurar a conduta sistemática atribuída ao perfil/identificador conhecido como <strong>"Kinesfera"</strong>, apontado como operador de um suposto esquema de intermediação financeira e retenção ilícita em negociações eletrônicas (*escrow service* informais).
+                        </p>
+                        <div class="bg-slate-50 dark:bg-slate-800/60 border-l-4 border-amber-500 p-4 rounded-r-lg italic text-xs space-y-1">
+                            <p class="font-semibold not-italic text-slate-900 dark:text-slate-100">Trecho da Peça do Ministério Público:</p>
+                            <p>"O investigado que atende pelo pseudônimo 'Kinesfera' utilizava-se da posição de garantidor neutro em operações de transferência de valores e ativos digitais para reter fundos de terceiros sem repasse aos destinatários devidos, simulando falhas operacionais e inconsistências na verificação de custódia."</p>
+                        </div>
+                        <p>
+                            As apurações preliminares apontam o uso reiterado de redes privadas e plataformas terceirizadas para viabilizar as transações, dificultando o rastreamento primário das contas bancárias de destino final. O processo encontra-se na fase de instrução e análise probatória técnica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline / Procedural Updates -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+                    <h3 class="text-base font-semibold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-2 flex items-center justify-between">
+                        <span class="flex items-center">
+                            <i class="fa-solid fa-timeline text-amber-500 mr-2"></i> Movimentações Processuais
+                        </span>
+                        <span class="text-xs text-slate-400 font-normal">Exibindo 4 mais recentes</span>
+                    </h3>
+
+                    <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 space-y-6 py-2">
+
+                        <!-- Item 1 -->
+                        <div class="ml-6 relative">
+                            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-amber-500 ring-4 ring-white dark:ring-slate-900"></span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-900 dark:text-white">JUNTADA DE LAUDO PERICIAL TELEMÁTICO</span>
+                                <span class="text-[11px] text-slate-400">12/10/2026</span>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                                Anexado relatório técnico de análise de logs de rede e registros digitais correlacionados à conta do investigado Kinesfera.
+                            </p>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="ml-6 relative">
+                            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-slate-900"></span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-900 dark:text-white">DEFERIMENTO DE QUEBRA DE SIGILO DIGITAL</span>
+                                <span class="text-[11px] text-slate-400">28/08/2026</span>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                                Decisão interlocutória deferindo a expedição de ofícios aos provedores de aplicação para fornecimento de IP e dados de acesso.
+                            </p>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="ml-6 relative">
+                            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-slate-900"></span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-900 dark:text-white">NOTIFICAÇÃO E CITAÇÃO ELETRÔNICA</span>
+                                <span class="text-[11px] text-slate-400">15/05/2026</span>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                                Expedida ordem de notificação formal aos canais e endereços vinculados ao pseudônimo registrado.
+                            </p>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="ml-6 relative">
+                            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-slate-900"></span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-900 dark:text-white">DISTRIBUIÇÃO DA AÇÃO PENAL</span>
+                                <span class="text-[11px] text-slate-400">14/02/2026</span>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                                Processo autuado e distribuído por sorteio para a 1ª Vara de Crimes Cibernéticos.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sidebar Info Column (1 Col) -->
+            <div class="space-y-6">
+
+                <!-- Metadata Card -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider border-b border-slate-200 dark:border-slate-800 pb-2">
+                        Dados Gerais
+                    </h3>
+
+                    <ul class="text-xs space-y-3">
+                        <li class="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                            <span class="text-slate-400">Classe Processual:</span>
+                            <span class="font-medium text-slate-800 dark:text-slate-200 text-right">Ação Penal / Fraude</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                            <span class="text-slate-400">Assunto Principal:</span>
+                            <span class="font-medium text-slate-800 dark:text-slate-200 text-right">Intermediação Ilícita</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                            <span class="text-slate-400">Juízo Julgador:</span>
+                            <span class="font-medium text-slate-800 dark:text-slate-200 text-right">1ª Vara Criminal</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                            <span class="text-slate-400">Segredo de Justiça:</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">Não (Público)</span>
+                        </li>
+                        <li class="flex justify-between pb-1">
+                            <span class="text-slate-400">Valor da Causa:</span>
+                            <span class="font-medium text-slate-800 dark:text-slate-200">R$ 148.500,00</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Verification Stamp Box -->
+                <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 text-center space-y-2">
+                    <i class="fa-solid fa-certificate text-amber-500 text-2xl"></i>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase">Autenticidade Verificada</h4>
+                    <p class="text-[11px] text-slate-600 dark:text-slate-400">
+                        Esta consulta é gerada a partir de dados públicos de diários oficiais e registros do sistema judicial unificado.
+                    </p>
+                    <div class="text-[10px] font-mono bg-white dark:bg-slate-950 p-2 rounded border border-slate-200 dark:border-slate-800 text-slate-500 mt-2">
+                        HASH: 8f92a4e11...b09a2026
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-12 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p>© 2026 Portal JusConsulta - Sistema Unificado de Transparência de Processos.</p>
+            <p class="text-[10px] text-slate-400">As informações exibidas referem-se a registros públicos e autos em fase de verificação legal.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        // Theme toggle logic
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Set dark mode as default
+        document.documentElement.classList.add('dark');
+
+        function downloadPDF() {
+            alert("A gerar certidão de consulta processual em formato PDF para o processo nº 8009241-18.2026.8.05.0113...");
+        }
+
+        function copyURL() {
+            document.execCommand('copy');
+            alert("Link do processo copiado para a área de transferência!");
+        }
+    </script>
 </body>
 </html>
+```
